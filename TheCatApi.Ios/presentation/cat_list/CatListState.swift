@@ -8,7 +8,7 @@
 import Foundation
 
 struct CatListState {
-    var isLoading: Bool = true
-    var cat: [Cat]? = nil
+    var isLoading: Bool = false
+    var cat: [Cat] = []
     var error: String? = nil
 }

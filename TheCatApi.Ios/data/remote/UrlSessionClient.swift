@@ -18,11 +18,11 @@ struct UrlSessionClient {
                 throw URLError(.badServerResponse)
             }
             // Convert data to string and print raw response
-            if let rawResponse = String(data: data, encoding: .utf8) {
-                print("Raw response: \(rawResponse)")
-            } else {
-                print("Failed to convert data to string.")
-            }
+//            if let rawResponse = String(data: data, encoding: .utf8) {
+//                print("Raw response: \(rawResponse)")
+//            } else {
+//                print("Failed to convert data to string.")
+//            }
             
             let result = try JSONDecoder().decode(T.self, from: data)
             return result

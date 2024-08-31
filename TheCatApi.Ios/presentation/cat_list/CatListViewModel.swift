@@ -13,7 +13,13 @@ class CatListViewModel {
     private let repository: CatRepository
     private let getImageUseCase: GetImagesUseCase
     
-    var state = CatListState()
+    var cat: [Cat] = []
+    var isLoading = false
+    var error: String? = nil
+    // pagination state
+    private var canLoadMorePages = true
+    private var page = 1
+    private var limit = 15
     
     init() {
         self.repository = CatRepositoryImpl(api: self.api)
@@ -21,19 +27,33 @@ class CatListViewModel {
     }
     
     func getImages() {
+        guard !isLoading && canLoadMorePages else { return }
+        self.isLoading = true
         Task {
-            let result = await getImageUseCase.execute(page: 1, limit: 40)
-            switch(result) {
-            case .loading :
-                print("vm: getCoins: .loading Called")
-                self.state = CatListState(isLoading: true)
-            case .failure(let e) :
-                self.state = CatListState(isLoading: false, error: e)
-                print("vm: getCoins: .failure Called")
-            case .success(let cat):
-                self.state = CatListState(isLoading: false, cat: cat, error: "")
-                print("vm: getCoins: .success Called")
-                print("vm: getCoins: .success: \(cat.count)")
+            let result = await getImageUseCase.execute(page: page, limit: limit)
+            
+            DispatchQueue.main.async {
+                
+                switch(result) {
+                case .loading :
+                    print("vm: getCoins: .loading Called")
+                    self.isLoading = true
+                case .failure(let e) :
+                    self.isLoading = false
+                    self.error = e
+                    print("vm: getCoins: .failure Called")
+                case .success(let cat):
+                    
+                    self.cat.append(contentsOf: cat)
+                    if cat.count < self.limit {
+                        self.canLoadMorePages = false
+                    }
+                    self.page += 1
+                    print("vm: getCoins: .success Called")
+                    print("vm: getCoins: .success: \(self.page)")
+                    self.isLoading = false
+                    print("isloading = false")
+                }
             }
         }
     }
