@@ -12,24 +12,9 @@ struct CatDetailScreen: View {
     var body: some View {
         ScrollView{
             VStack {
-                AsyncImage(url: URL(string: cat.url)) { phase in
-                    switch phase {
-                    case .empty:
-                        ProgressView() // Loading indicator
-                    case .success(let image):
-                        image
-                            .resizable()
-                            .aspectRatio(contentMode: .fill)
-                    case .failure:
-                        Image(systemName: "exclamationmark.triangle.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.red)
-                            
-                    @unknown default:
-                        EmptyView()
-                    }
-                }
+                CachedAsyncImage(url: cat.url)
+                    .aspectRatio(contentMode: .fill)
+                
                 VStack{
                     if let catBread = cat.breeds.first {
                         HStack{
@@ -74,5 +59,5 @@ struct CatDetailScreen: View {
 #Preview {
     CatDetailScreen(
         cat: Cat.example
-        )
+    )
 }

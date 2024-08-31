@@ -18,6 +18,8 @@
 		BC9455672C7F33CA00C0E0DD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC9455662C7F33CA00C0E0DD /* ContentView.swift */; };
 		BC9455692C7F33CC00C0E0DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC9455682C7F33CC00C0E0DD /* Assets.xcassets */; };
 		BC94556C2C7F33CC00C0E0DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC94556B2C7F33CC00C0E0DD /* Preview Assets.xcassets */; };
+		BCA58A362C83D35300C0A24E /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA58A352C83D35300C0A24E /* ImageCache.swift */; };
+		BCA58A392C83D4B400C0A24E /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCA58A382C83D4B400C0A24E /* CachedAsyncImage.swift */; };
 		BCB3D9212C80F13F0058AF8E /* GetImagesUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3D9202C80F13F0058AF8E /* GetImagesUseCase.swift */; };
 		BCB3D9232C80F1AE0058AF8E /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3D9222C80F1AE0058AF8E /* Resource.swift */; };
 		BCB3D9262C80F32C0058AF8E /* CatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3D9252C80F32C0058AF8E /* CatListViewModel.swift */; };
@@ -41,6 +43,8 @@
 		BC9455662C7F33CA00C0E0DD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BC9455682C7F33CC00C0E0DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BC94556B2C7F33CC00C0E0DD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BCA58A352C83D35300C0A24E /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		BCA58A382C83D4B400C0A24E /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		BCB3D9202C80F13F0058AF8E /* GetImagesUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImagesUseCase.swift; sourceTree = "<group>"; };
 		BCB3D9222C80F1AE0058AF8E /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
 		BCB3D9252C80F32C0058AF8E /* CatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatListViewModel.swift; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 		BC9455632C7F33CA00C0E0DD /* TheCatApi.Ios */ = {
 			isa = PBXGroup;
 			children = (
+				BCA58A372C83D4A400C0A24E /* caching */,
 				BC67AAAE2C7FA62100D85EE0 /* common */,
 				BC67AAAD2C7FA5E700D85EE0 /* data */,
 				BC67AAA92C7FA2F600D85EE0 /* domain */,
@@ -171,6 +176,15 @@
 				BC94556B2C7F33CC00C0E0DD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BCA58A372C83D4A400C0A24E /* caching */ = {
+			isa = PBXGroup;
+			children = (
+				BCA58A352C83D35300C0A24E /* ImageCache.swift */,
+				BCA58A382C83D4B400C0A24E /* CachedAsyncImage.swift */,
+			);
+			path = caching;
 			sourceTree = "<group>";
 		};
 		BCB3D91F2C80F1250058AF8E /* usecases */ = {
@@ -286,10 +300,12 @@
 				BCB3D9232C80F1AE0058AF8E /* Resource.swift in Sources */,
 				BC67AAB72C7FA81C00D85EE0 /* UrlSessionClient.swift in Sources */,
 				BCB3D9262C80F32C0058AF8E /* CatListViewModel.swift in Sources */,
+				BCA58A392C83D4B400C0A24E /* CachedAsyncImage.swift in Sources */,
 				BCB3D92E2C80F7FD0058AF8E /* CatImageItem.swift in Sources */,
 				BC67AAB32C7FA74F00D85EE0 /* CatApiService.swift in Sources */,
 				BC9455652C7F33CA00C0E0DD /* TheCatApi_IosApp.swift in Sources */,
 				BCB3D9372C81096E0058AF8E /* CatDetailScreen.swift in Sources */,
+				BCA58A362C83D35300C0A24E /* ImageCache.swift in Sources */,
 				BC67AABF2C7FAAF300D85EE0 /* CatRepositoryImpl.swift in Sources */,
 				BC67AAAC2C7FA5BF00D85EE0 /* Cat.swift in Sources */,
 				BC67AABC2C7FAA3500D85EE0 /* CatRepository.swift in Sources */,
