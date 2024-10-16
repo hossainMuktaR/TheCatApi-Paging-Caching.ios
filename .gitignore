@@ -1,1 +1,3 @@
 TheCatApi.Ios.xcodeproj/project.xcworkspace/xcuserdata/hossainmuktar.xcuserdatad/UserInterfaceState.xcuserstate
+# ignore secrets.plist file
+TheCatApi.Ios/Secrets.plist

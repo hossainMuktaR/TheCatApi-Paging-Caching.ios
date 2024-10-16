@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -28,6 +28,7 @@
 		BCB3D92E2C80F7FD0058AF8E /* CatImageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3D92D2C80F7FD0058AF8E /* CatImageItem.swift */; };
 		BCB3D9302C80FF210058AF8E /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3D92F2C80FF210058AF8E /* Constant.swift */; };
 		BCB3D9372C81096E0058AF8E /* CatDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCB3D9362C81096E0058AF8E /* CatDetailScreen.swift */; };
+		BCE9DC9A2CBFA42A00B7F341 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = BCE9DC992CBFA41E00B7F341 /* Secrets.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +54,14 @@
 		BCB3D92D2C80F7FD0058AF8E /* CatImageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CatImageItem.swift; path = TheCatApi.Ios/presentation/cat_list/CatImageItem.swift; sourceTree = SOURCE_ROOT; };
 		BCB3D92F2C80FF210058AF8E /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		BCB3D9362C81096E0058AF8E /* CatDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDetailScreen.swift; sourceTree = "<group>"; };
+		BCE9DC942CBF99B900B7F341 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		BCE9DC952CBF99EF00B7F341 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		BCE9DC992CBFA41E00B7F341 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Secrets.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		BCE9DC912CBF995A00B7F341 /* docs */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = docs; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		BC94555E2C7F33CA00C0E0DD /* Frameworks */ = {
@@ -142,6 +150,9 @@
 		BC9455582C7F33CA00C0E0DD = {
 			isa = PBXGroup;
 			children = (
+				BCE9DC952CBF99EF00B7F341 /* README.md */,
+				BCE9DC942CBF99B900B7F341 /* LICENSE */,
+				BCE9DC912CBF995A00B7F341 /* docs */,
 				BC9455632C7F33CA00C0E0DD /* TheCatApi.Ios */,
 				BC9455622C7F33CA00C0E0DD /* Products */,
 			);
@@ -158,6 +169,7 @@
 		BC9455632C7F33CA00C0E0DD /* TheCatApi.Ios */ = {
 			isa = PBXGroup;
 			children = (
+				BCE9DC992CBFA41E00B7F341 /* Secrets.plist */,
 				BCA58A372C83D4A400C0A24E /* caching */,
 				BC67AAAE2C7FA62100D85EE0 /* common */,
 				BC67AAAD2C7FA5E700D85EE0 /* data */,
@@ -281,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC94556C2C7F33CC00C0E0DD /* Preview Assets.xcassets in Resources */,
+				BCE9DC9A2CBFA42A00B7F341 /* Secrets.plist in Resources */,
 				BC9455692C7F33CC00C0E0DD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
